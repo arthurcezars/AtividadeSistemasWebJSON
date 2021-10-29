@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">desc</th>
+                <th scope="col">fabricante</th>
+                <th scope="col">quantidade</th>
+                <th scope="col">precunit</th>
+                <th scope="col">coditem</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for valor in dados %}
+            <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{ valor.desc }}</td>
+                <td>{{ valor.fabricante }}</td>
+                <td>{{ valor.quantidade }}</td>
+                <td>{{ valor.precunit }}</td>
+                <td>{{ valor.coditem }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
